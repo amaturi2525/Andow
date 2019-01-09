@@ -1,0 +1,1022 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    color: #222;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+/*
+body {
+    min-height: 100%;
+    min-width: 100%;
+    position: relative;
+    margin: 0;
+    padding-bottom: 50px;
+}
+*/
+/**** 全体のレイアウト ****/
+
+.contents {
+    display: flex; display: -webkit-flex;
+    flex-direction: row;
+    padding: 20px 20px 20px 20px;
+}
+
+.side-contents {
+    flex: 0 0 350px;
+    width: 400px;
+    padding: 25px;
+    background-color: #e7e7e7;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.side-contents.right {
+    margin-left: 30px;
+}
+
+.side-contents.left {
+    margin-right: 30px;
+}
+
+.main-contents {
+    flex: 0 0 1;
+    -webkit-flex: 1;
+
+    padding: 25px;
+    background-color: #e7e7e7;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+
+    display: flex;           display: -webkit-flex;
+    align-items: center;     -webkit-align-items: center;
+    flex-direction: column;
+}
+
+/*************************/
+
+/**** paginator ****/
+
+.paginator {
+    text-align:center;
+}
+
+/*******************/
+
+/**** flash message ****/
+
+.message {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+.message.success {
+    background-color: #ddffdd;
+    color: #11aa11;
+    border: 2px solid;
+}
+
+.message.error {
+    background-color: #ffdddd;
+    color: #ff5555;
+    border: 2px solid;
+}
+
+/***********************/
+
+/********* table *********/
+
+table, td, th {
+    border: 2px solid black;
+}
+
+table {
+    width : 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+}
+
+table>th {
+    font-weight: 500;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* テーブルの種類毎に色を変更 */
+
+table.user th {
+    background-color: #4CAFFF;
+    color: white;
+}
+
+table.project th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table.minute th {
+    background-color: #FFAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/*************************/
+
+/******* navigation bar *******/
+
+#navigation-bar {
+    font-size: 20px;
+    height: 40px;
+    padding-left: 10px;
+    background-color: #ccc;
+    color: #888;
+
+    display: flex;           display: -webkit-flex;
+    align-items: center;     -webkit-align-items: center;
+}
+
+#navigation-bar a {
+    height: 40px;
+    color: #555;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    display: flex;           display: -webkit-flex;
+    align-items: center;     -webkit-align-items: center;
+}
+
+#navigation-bar a:hover {
+    background-color: #f3f3f3;
+}
+
+#navigation-bar span {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/******** header ********/
+
+.flex-navbar {
+    width: 100%;
+    min-width: 800px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+
+    font-size: 20px;
+}
+
+.flex-navbar-header {
+    padding-left: 10px;
+    padding-right: 5px;
+    background-color: #f3f3f3;
+
+    display: flex;           display: -webkit-flex;
+    align-items: center;     -webkit-align-items: center;
+    justify-content: center; -webkit-justify-content: center;
+}
+
+.flex-navbar-header>a {
+    color: #666;
+    text-decoration: none;
+}
+
+.flex-navbar>#version {
+    background-color: #f3f3f3;
+    color: #666;
+    font-size: 15px;
+    padding-top: 5px;
+    display: flex;           display: -webkit-flex;
+    align-items: center;     -webkit-align-items: center;
+    justify-content: center; -webkit-justify-content: center;
+}
+
+ul.flex-navbar-contents {
+    flex: 1;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    background-color: #f3f3f3;
+
+    display: flex;             display: -webkit-flex;
+    flex-direction: row;       -webkit-flex-direction: row;
+    justify-content: flex-end; -webkit-justify-content: flex-end;
+}
+
+ul.flex-navbar-contents>li {
+    display: flex;           display: -webkit-flex;
+    align-items: center;     -webkit-align-items: center;
+    justify-content: center; -webkit-justify-content: center;
+}
+
+ul.flex-navbar-contents>li a {
+    display: block;
+    color: #666;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+ul.flex-navbar-contents>li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+ul.flex-navbar-contents>li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+
+/*************************/
+
+/***** footer *****/
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: #efefef;
+
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/******************/
+
+/****** トップページ ******/
+
+/* 既存のヘッダーの色を変更 */
+
+header.home>.flex-navbar>.flex-navbar-header {
+    background-color: #ddd;
+}
+
+header.home>.flex-navbar>#version {
+    background-color: #ddd;
+}
+
+header.home>.flex-navbar>.flex-navbar-contents {
+    background-color: #ddd;
+}
+
+.footer.home {
+    background-color: #ddd;
+}
+
+/* コンテンツ */
+
+#description {
+    width: 100%;
+    height: 100%;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #ddd;
+    text-align: center;
+}
+
+#description > h1 {
+    margin-bottom: 30px;
+}
+
+.app-container-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+
+    background-color: #fff;
+
+    display: flex;
+    display: -webkit-flex;
+}
+
+.app-container {
+    flex: 1;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ddd;
+    padding: 30px;
+
+    display: flex;       display: -webkit-flex;
+    align-items: center; -webkit-align-items: center;
+    flex-direction: column;
+}
+
+.app-container > p {
+    text-align: left;
+}
+
+.app-icon-wrapper {
+    width:150px;
+    height:150px;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+.app-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.app-name {
+    margin-bottom:10px;
+    margin-top:5px;
+    font-family: "Londrina Solid",cursive;
+}
+
+.slack-versions {
+    width: 100%;
+    padding-top: 20px;
+
+    display: flex;       display: -webkit-flex;
+    align-items: center; -webkit-align-items: center;
+    justify-content: center; -webkit-justify-content: center;
+}
+
+.slack-version {
+    flex: 1;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+/**************************/
+
+/******* コンテナ ********/
+
+/* ログインコンテナ */
+
+.login-container-wrapper {
+    width: 90%;
+    height: 400px;
+
+    display: flex;           display: -webkit-flex;
+    align-items: center; -webkit-align-items: center;
+    justify-content: center; -webkit-justify-content: center;
+}
+
+.login-container {
+    width: 500px;
+    height: 250px;
+
+    padding: 10px 30px 10px 30px;
+
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+
+    display: flex; display: -webkit-flex;
+    flex-direction: column;
+}
+
+.login-container>.input {
+    flex: 1;
+
+    display: flex;       display: -webkit-flex;
+    align-items: center; -webkit-align-items: center;
+    flex-direction: row;
+}
+
+.login-container>.input>label {
+    maring: 0px;
+    padding: 0px;
+
+    width: 130px;
+    font-size: 14px;
+    font-weight: bold;
+
+    display: flex;           display: -webkit-flex;
+    align-items: center;     -webkit-align-items: center;
+    justify-content: center; -webkit-justify-content: center;
+}
+
+.login-container>.input>input {
+    flex: 1;
+}
+
+.login-container-footer {
+    flex: 1;
+    width: 100%;
+
+    display: flex; flex-direction: row;
+}
+
+.login-container-footer-content {
+    width: 50%;
+
+    display: flex;           display: -webkit-flex;
+    align-items: center;     -webkit-align-items: center;
+    justify-content: center; -webkit-justify-content: center;
+}
+
+.login-container-footer-content>button {
+    margin: 0px;
+    padding: 10px 15px 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-container-footer-content>a {
+    margin: 0;
+    padding: 10px 15px 10px 15px;
+    font-size: 14px;
+}
+
+/********************/
+
+/* フォームコンテナ */
+
+.form-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 30px 50px 30px 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+.form-container-fields {
+    flex: 1;
+    width: 100%;
+}
+
+.form-container-field {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;          display: -webkit-flex;
+    align-items: center;    -webkit-align-items: center;
+    flex-direction: column; -webkit-flex-wrap: wrap;
+}
+
+.form-container-field-column {
+    width: 100%;
+    flex: 1;                   -webkit-flex: 1;
+
+    display: flex;             display: -webkit-flex;
+    align-items: center;       -webkit-align-items: center;
+    justify-content: flex-start; -webkit-justify-content: flex-start;
+    flex-direction: column;
+        align-items:         baseline;
+}
+
+.form-container-field-column-label {
+    maring: 0px;
+    padding: 0px;
+    padding-right: 10px;
+
+    width: 180px;
+    font-size: 20px;
+    font-weight: bold;
+
+    display: flex;             display: -webkit-flex;
+    align-items: center;       -webkit-align-items: center;
+    justify-content: flex-end; -webkit-justify-content: flex-end;
+}
+
+
+.form-container-field-column-select {
+    flex: 1;
+    width: 100%;
+}
+
+.form-container-field-column-textarea {
+    flex: 1;
+    width: 100%;
+}
+
+.form-container-field-column-input {
+    flex: 1;
+    width: 100%;
+}
+
+.form-container-field-error {
+    flex: 1;
+    width: 100%;
+    padding-left: 180px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: red;
+}
+
+.form-container-footer {
+    height: 70px;
+    width: 100%;
+
+    display: flex;             display: -webkit-flex;
+    align-items: center;       -webkit-align-items: center;
+    justify-content: flex-end; -webkit-justify-content: flex-end;
+}
+
+.form-container-footer>button {
+    margin: 0px;
+    padding: 10px 15px 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/********************/
+
+/* 年月 */
+
+.date-form {
+    display: flex;       display: -webkit-flex;
+    align-items: center; -webkit-align-items: center;
+    flex-direction: row;
+}
+
+.date-form select {
+    flex: 1;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.date-form .form-container-field-input {
+    flex: 1;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+/* エラー */
+
+.form-container.error {
+    width: 700px;
+}
+
+/* 名前 */
+
+.name-form {
+    display: flex;       display: -webkit-flex;
+    align-items: center; -webkit-align-items: center;
+    flex-direction: row;
+}
+
+.name-form>input {
+    flex: 1;  -webkit-flex: 1;
+}
+
+#name-form-first-name {
+    margin-left: 5px;
+}
+
+#name-form-last-name {
+    margin-right: 5px;
+}
+
+/* 期間(時刻含む) */
+
+.span-datetime-form {
+    display: flex;       display: -webkit-flex;
+    align-items: center; -webkit-align-items: center;
+    justify-content: flex-start; -webkit-justify-content: flex-start;
+    flex-direction: row;
+}
+
+.span-datetime-form-date {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.span-datetime-form-holded_at {
+    width: 100px;
+}
+
+.span-datetime-form-ended_at {
+    width: 100px;
+}
+
+.span-datetime-form > span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/* 期間 */
+
+.span-form {
+    display: flex;       display: -webkit-flex;
+    align-items: center; -webkit-align-items: center;
+    justify-content: flex-start; -webkit-justify-content: flex-start;
+    flex-direction: row;
+}
+
+.span-form>input {
+    flex: 0 0 70px;  -webkit-flex: 0 0 70px;
+}
+
+.span-form-started_at {
+    margin-right: 5px;
+}
+
+.span-form-finished_at {
+    margin-left: 5px;
+}
+
+.span-form > span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* 出席フォーム */
+
+.attendance-form-inputs-wrapper {
+    display: flex;             display: -webkit-flex;
+    justify-content: flex-start; -webkit-justify-content: flex-start;
+    align-items: flex-start; -webkit-align-items: flex-start;
+    flex-direction: row;     -webkit-flex-direction: row;
+    flex-wrap: wrap;         -webkit-flex-wrap: wrap;
+    flex-flow: row wrap;     -webkit-flex-flow: row wrap;
+    align-content: flex-end; -webkit-align-content: flex-end;
+
+    border: 1px black solid;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.attendance-form-input {
+    flex: 0 0 200px;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 30px;
+
+    display: flex;             display: -webkit-flex;
+    flex-direction: row;     -webkit-flex-direction: row;
+}
+
+.attendance-form-input-label {
+    display: flex;           display: -webkit-flex;
+    align-items: center;     -webkit-align-items: center;
+    justify-content: center; -webkit-justify-content: center;
+
+    flex: 1;
+    flex-shrink: 0;
+    word-break: break-all;
+}
+
+.attendance-form-input-select {
+    flex: 0 0 80px;
+}
+
+/* チェックボックス */
+
+.checkbox-form {
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;             display: -webkit-flex;
+}
+
+/* スクロールする方 */
+.checkbox-form-input-wrapper {
+    flex: 1;                     -webkit-flex: 1;
+    justify-content: flex-start; -webkit-justify-content: flex-start;
+
+    height: 100%;
+    overflow-y: scroll;
+
+    border: 1px black solid;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+/* スクロールされる方 */
+.checkbox-form-input {
+    display: flex;           display: -webkit-flex;
+    align-items: flex-start; -webkit-align-items: flex-start;
+    justify-content: flex-start; -webkit-justify-content: flex-start;
+    flex-direction: row;     -webkit-flex-direction: row;
+    flex-wrap: wrap;         -webkit-flex-wrap: wrap;
+    flex-flow: row wrap;     -webkit-flex-flow: row wrap;
+    align-content: flex-end; -webkit-align-content: flex-end;
+}
+
+.checkbox-form-input>.checkbox {
+    flex: 0 0 180px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.checkbox-form-input>.checkbox>label {
+    width: 100%;
+}
+
+.checkbox-form-input>.checkbox>label>input {
+    position:relative;
+    top:-1px;
+    width: 30px;
+}
+
+.checkbox-form-input>.checkbox>label>.select {
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+/*** ユーザテーブル ***/
+
+.user-table {
+    display: flex;           display: -webkit-flex;
+    flex-direction: column;  -webkit-flex-direction: column;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.user-table-row {
+    flex: 0 0 1;             -webkit-flex: 0 0 1;
+    display: flex;           display: -webkit-flex;
+    flex-direction: row;     -webkit-flex-direction: row;
+}
+
+.user-table-row-elem {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 5px;
+}
+
+.user-table-row-elem.th {
+    width: 100%;
+    text-align: center;
+    display: flex;           display: -webkit-flex;
+    align-items: center;     -webkit-align-items: center;
+    justify-content: center; -webkit-justify-content: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.user-table-row-elem.td {
+    word-break: break-all;
+    flex: 0 0 1;
+    font-size: 15px;
+}
+
+.user-table.user .th {
+    background-color: #4CAFFF;
+    color: white;
+}
+
+.user-table.project .th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.user-table.minute .th {
+    background-color: #FFAF50;
+    color: white;
+}
+
+/* 参加者テーブル */
+
+.participation-table .project-member {
+    width: 40%;
+}
+
+.participation-table .participation {
+    width: 10%;
+    text-align: center;
+}
+
+/* プロジェクト参加者テーブル */
+
+.project-member-table td {
+    font-size: 13px;
+}
+
+.project-member-table-member {
+    width: 33%;
+    text-align: left;
+}
+
+.project-member-table-role {
+    width: 17%;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/********* 各ページ個別の設定 **********/
+
+/*** 担当種別追加/編集画面 ***/
+
+.form-container.role {
+    width: 500px;
+}
+
+/*** 案件項目追加/編集画面 ***/
+
+.form-container.item-category {
+    width: 600px;
+}
+
+/*** 案件大項目追加/編集画面 ***/
+
+.form-container.item-meta-category {
+    width: 600px;
+}
+
+/*** ユーザ追加/編集画面 ***/
+
+.form-container.add-user {
+    width: 800px;
+}
+
+/*** プロジェクト追加画面 ***/
+
+.form-container.add-project {
+    width: 900px;
+}
+
+.form-container-fields.add-project {
+    width: 800px;
+}
+
+.checkbox-form.add-project {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex: 0 0 200px;
+}
+
+/*** 議事録追加画面 ***/
+
+.form-container.add-minute {
+    width: 800px;
+}
+
+.form-container-fields.add-minute {
+    width: 700px;
+}
+
+.checkbox-form.add-minute {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex: 0 0 200px;
+}
+
+/*** 案件追加画面 ***/
+
+.form-container.add-item {
+    width: 900px;
+}
+
+.form-container-fields.add-item {
+    width: 800px;
+}
+
+.checkbox-form.add-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex: 0 0 200px;
+}
+
+#contents-chars {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+/*** ユーザ画面 ***/
+
+.main-contents.users-view {
+    flex: 0 0 500px;
+}
+
+.contents.users-view {
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.main-contents.users-projects-view {
+    flex: 0 0 800px;
+}
+
+.contents.users-projects-view {
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+/* ユーザ詳細テーブル */
+
+.user-detail-table {
+    width: 400px;
+}
+
+.user-detail-table th {
+    width: 100px;
+}
+
+/* プロジェクトテーブル */
+
+table.project-table {
+    width: 600px;
+}
+
+.project-table-content.project-name {
+    width: 60%;
+}
+
+.project-table-content.started-at {
+    width: 40%;
+    text-align: center;
+}
+
+td.project-table-content.project-name {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+/* 議事録テーブル */
+
+table.minute.projects-view {
+    min-width: 700px;
+}
+
+.minute-table-content.minute-name {
+    width: 50%;
+}
+
+td.minute-table-content.minute-name {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.minute-table-content.holded-at {
+    width: 12%;
+    text-align: center;
+}
+
+td.minute-table-content.holded-at {
+    font-size: 14px;
+}
+
+.minute-table-content.examined-at {
+    width: 12%;
+    text-align: center;
+}
+
+td.minute-table-content.examined-at {
+    font-size: 14px;
+}
+
+.minute-table-content.approved-at {
+    width: 12%;
+    text-align: center;
+}
+
+td.minute-table-content.approved-at {
+    font-size: 14px;
+}
+
+.minute-table-content.is-deletable {
+    width: 7%;
+    text-align: center;
+}
+
+td.minute-table-content.is-deletable {
+    font-size: 14px;
+}
+
+span.for_examine_or_approve {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* プロジェクト詳細テーブル */
+
+.project-detail-table th {
+    width: 130px;
+}
+
+/* 議事録詳細テーブル */
+
+.minute-detail-table th {
+    width: 90px;
+}
