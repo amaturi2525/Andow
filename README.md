@@ -1,4 +1,4 @@
-#大学生の課題管理Webアプリ
+# 大学生の課題管理Webアプリ
 
 [デモ動画](https://youtu.be/jMAJXzBfJ-0)
 
